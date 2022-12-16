@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\controllerUsuario;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+/*
+Route::post('/principal', [ControllerUsuario::class, 'store'])->name('usuario');
+*/
+
+/*
+Route::post('/principal', 'controllerUsuario@index');
+*/
