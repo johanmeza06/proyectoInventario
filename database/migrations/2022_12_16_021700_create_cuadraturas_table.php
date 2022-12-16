@@ -14,8 +14,11 @@ return new class extends Migration
     public function up()
     {
         Schema::create('cuadraturas', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id('id_cuadratura');
+            $table->bigInteger('ganancias');
+            $table->bigInteger('perdidas');
+            $table->bigInteger('ventas_id')->unsigned();
+            $table->foreign('ventas_id')->references('id_venta')->on('ventas');
         });
     }
 
